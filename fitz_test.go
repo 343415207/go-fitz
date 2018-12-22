@@ -23,7 +23,7 @@ func TestImage(t *testing.T) {
 	}
 
 	for n := 0; n < doc.NumPage(); n++ {
-		img, err := doc.Image(n)
+		img, err := doc.ImageDefault(n)
 		if err != nil {
 			t.Error(err)
 		}

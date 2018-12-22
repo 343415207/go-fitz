@@ -9,7 +9,7 @@ that can extract pages from PDF, EPUB and XPS documents as images, text, html or
 
 ### Install
 
-    go get -u github.com/gen2brain/go-fitz
+    go get -u https://github.com/343415207/go-fitz
 
 ### Build tags
 
@@ -45,7 +45,7 @@ func main() {
 
 	// Extract pages as images
 	for n := 0; n < doc.NumPage(); n++ {
-		img, err := doc.Image(n)
+		img, err := doc.ImageDefault(n)
 		if err != nil {
 			panic(err)
 		}
